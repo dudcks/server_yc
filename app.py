@@ -50,9 +50,7 @@ async def check_ai(request: Request):
 
         results = []
         for url in links:
-            print(url)
             text = crawl.get_tokens_from_url(url)
-            print(url, text)
             if not text:
                 results.append({"url": url, "ai_probability": "텍스트 추출 실패"})
                 continue

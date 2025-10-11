@@ -15,10 +15,10 @@ def detect_ai_generated_text(text: str, model_eng, model_kor):
         if(detected_lang == 'ko'):
             #print(f"Detected language: Korean, {text}")
             prob = detect_ai_generated_text_kor(text, model_kor)
-            if prob['max_probability'] is None:
+            if prob['average_probability'] is None:
                 prob = "error"
             else:
-                prob = prob['max_probability']
+                prob = prob['average_probability']
             return prob
         else:
             #print(f"Detected language: English, {text}")

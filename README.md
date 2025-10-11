@@ -6,3 +6,8 @@
 
 4. 테스트 실행 : pytest test.py
 - test는 모듈별로 클래스를 만들어 진행할 것
+
+5. kss 사용시 mecab이 없어 pecab을 사용한다는 문구가 출력되는 경우 mecab설치 필요.
+- kss에서 mecab을 인식하지 못하고 pecab으로 동작하는 경우, libstdcc의 버전 문제일 수 있음.
+## conda install -c conda-forge libstdcxx-ng
+
